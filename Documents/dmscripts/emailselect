@@ -1,0 +1,15 @@
+#!/bin/sh
+
+choices="outlook\nproton\ngmail"
+
+chosen=$(echo -e "$choices" | dmenu -i)
+
+case "$chosen" in
+	outlook
+	proton
+	gmail) brave gmail.com;;
+	firefox) firefox;;
+	brave) brave;;
+	chromium) chromium;;
+	whatsapp) chromium --profile-directory="Profile 1" web.whatsapp.com;;
+esac

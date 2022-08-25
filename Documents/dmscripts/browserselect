@@ -1,0 +1,19 @@
+#!/bin/sh
+
+choices="Firefox\nBrave\nChromium\nWhatsapp\nYoutube\nOutlook\nElearning\nProton\nGmail\nNotion\nESIMemes"
+
+chosen=$(echo -e "$choices" | dmenu -i)
+
+case "$chosen" in
+	Firefox)	firefox;;
+	Brave)		brave;;
+	Chromium)	chromium;;
+	Whatsapp)	chromium --profile-directory="Profile 1" web.whatsapp.com;;
+	Youtube)	chromium --profile-directory="Profile 2" youtube.com;;
+	Outlook)	brave outlook.office.com/mail;;
+	Elearning)	brave elearning.esi.ac.ma;;
+	Proton)		brave proton.me;;
+	Gmail)		brave gmail.com;;
+	Notion)		brave notion.com;;
+	ESIMemes)	chromium https://www.facebook.com/groups/esimemes?sorting_setting=CHRONOLOGICAL;;
+esac
